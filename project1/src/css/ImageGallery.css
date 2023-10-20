@@ -1,0 +1,62 @@
+/* Reset some default styles and set the background color */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: #191919;
+  }
+  
+  /* Set the width for the main container and use flex display */
+  .gallery-wrap {
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+  }
+  
+  /* Style the gallery container */
+  .gallery {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%;
+    scroll-behavior: smooth; /* Add smooth scrolling */
+    white-space: nowrap; /* Prevent line breaks between images */
+  }
+  
+  /* Style each image container */
+  span {
+    flex: 0 0 33.33%; /* Display three images at a time */
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Style the images inside each container */
+  span img {
+    max-width: 100%;
+    max-height: 200px; /* Set a maximum height for the images */
+    transition: transform 0.5s;
+  }
+  
+  /* Hide the scrollbar */
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Style the navigation buttons */
+  #backBtn, #nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+  }
+  
+  /* Add a hover effect for the images */
+  span:hover img {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
